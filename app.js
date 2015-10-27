@@ -221,7 +221,9 @@ app.config(['$routeProvider',
             templateUrl: 'views/workout.html',
             controller: 'WorkoutCtrl',
             resolve: {
-
+              templateUrl: 'views/workout.html',
+              controller: 'WorkoutCtrl',
+              resolve: {
           }
 
 
