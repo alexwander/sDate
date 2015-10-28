@@ -218,6 +218,12 @@ app.config(['$routeProvider',
 
           .when('/:groupId/workout',{
 
+            templateUrl: 'views/workout.html',
+            controller: 'WorkoutCtrl',
+            resolve: {
+
+          }
+
 
 
       app.run(['$rootScope', '$route', '$timeout', 'FBURL',
