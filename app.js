@@ -216,6 +216,7 @@ app.config(['$routeProvider',
           })
         }])
 
+          .when('/:groupId/workout',{
 
 
 
