@@ -178,7 +178,57 @@ app.config(['$routeProvider',
           }
         })
 
+    app.run(['$rootScope', '$route', '$timeout', 'FBURL',
+      function($rootScope, $route, $timeout, FBURL){
+        $rootScope.userID = null;
+        var ref = new Firebase(FBURL);
+        var auth = new FirebaseSimpleLogin(ref, function(error,user){
+          if(user){
+            $rootScope.userID = user.uid;
+          }
+        })
+      } app.run(['$rootScope', '$route', '$timeout', 'FBURL',
+        function($rootScope, $route, $timeout, FBURL){
+          $rootScope.userID = null;
+          var ref = new Firebase(FBURL);
+          var auth = new FirebaseSimpleLogin(ref, function(error,user){
+            if(user){
+              $rootScope.userID = user.uid;
+            }
+          })
+        }]) app.run(['$rootScope', '$route', '$timeout', 'FBURL',
+        function($rootScope, $route, $timeout, FBURL){
+          $rootScope.userID = null;
+          var ref = new Firebase(FBURL);
+          var auth = new FirebaseSimpleLogin(ref, function(error,user){
+            if(user){
+              $rootScope.userID = user.uid;
+            }
+          })
+        }]) app.run(['$rootScope', '$route', '$timeout', 'FBURL',
+        function($rootScope, $route, $timeout, FBURL){
+          $rootScope.userID = null;
+          var ref = new Firebase(FBURL);
+          var auth = new FirebaseSimpleLogin(ref, function(error,user){
+            if(user){
+              $rootScope.userID = user.uid;
+            }
+          })
+        }])
 
+
+
+
+      app.run(['$rootScope', '$route', '$timeout', 'FBURL',
+        function($rootScope, $route, $timeout, FBURL){
+          $rootScope.userID = null;
+          var ref = new Firebase(FBURL);
+          var auth = new FirebaseSimpleLogin(ref, function(error,user){
+            if(user){
+              $rootScope.userID = user.uid;
+            }
+          })
+        }])
 
 
 
