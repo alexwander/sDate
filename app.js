@@ -167,7 +167,7 @@ app.config(['$routeProvider',
             user: function($rootScope, $firebase, $firebaseSimpleLogin){
               if(!$rootScope.userID){
                 $rootScope.loading = 1;
-                var ref = new Firebase('https://fitnesskdm.firebaseIO.com');
+                var ref = new Firebase('https://.com');
                 var auth = $firebaseSimpleLogin(ref);
                 return auth.$getCurrentUser()
               }else{
