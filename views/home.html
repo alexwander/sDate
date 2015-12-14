@@ -31,3 +31,9 @@
             <span class='button-text' ng-show='signUpMode'>Cancel</span>
         </button>
     </div>
+
+    <div class='additional-info fade-in-out' ng-hide='signUpMode'>
+        <p>Need an account? <button class='sign-up' ng-click='signUpMode = true'>Sign up!</button></p>
+        <p>*As a guest, you don't need to provide an email/password, but your data will only be stored until you log out.</p>
+    </div>
+</div>
