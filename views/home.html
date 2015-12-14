@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div id='signin' ng-show='!userID'>
+    <header>
+        <h1>Fitness</h1>
+    </header>
+    <p ng-show="message && !passReset" class="message left">{{message}}</p>
+    <p ng-show='passReset' class='message left'>Password incorrect: <a ng-click='resetPassword()'> click here to reset.</a></p>
+    <form class='login-info' ng-submit='submit("logincreate")'>
+        <div class='input-wrapper'>
+            <label for='email' class='left'>Email</label>
+            <input type='email' name='email' id='email' ng-model='user.email'>
+        </div>
+        <div class='input-wrapper'>
+            <label class='left'>Password</label>
+            <input type="password" ng-model="user.password" />
+        </div>
