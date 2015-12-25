@@ -4,3 +4,13 @@
         <button class='left' ng-click='submit("done")'>&lsaquo; Done</button>
         <button class='fade-in-out right' ng-click='submit("next")'>Next &rsaquo;</button>
     </header>
+
+    <div ng-include="'partials/exercise-form.html'"></div>
+    <div id='modal-wrapper' class='fade-in-out' ng-if='modal'>
+        <div id='modal-window'>
+            <p>Because the fields are not complete, this exercise will not be saved. Do you wish to proceed?</p>
+            <button id='yes-button' ng-click='modalClick("yes")'>Yes</button>
+            <button id='no-button' ng-click='modalClick()'>No</button>
+        </div>
+    </div>
+</div>
