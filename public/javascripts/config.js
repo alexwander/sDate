@@ -25,3 +25,22 @@ app.config(['$routeProvider',
                 templateUrl: 'views/groups.html',
                 authRequired: true
             })
+            .when('/new-group',{
+                templateUrl: 'views/new-group.html',
+                authRequired: true
+            })
+
+            .when('/:groupId/edit-group',{
+                templateUrl: 'views/edit-group.html',
+                authRequired: true
+            })
+
+            .when('/:groupId/new-exercise/:exerciseCount',{
+                templateUrl: 'views/new-exercise.html',
+                authRequired: true
+            })
+
+            .when('/new-exercise2',{
+                templateUrl: 'views/new-exercise.html',
+            })
+
