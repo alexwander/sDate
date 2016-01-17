@@ -63,3 +63,25 @@ module.exports = app;
 var app = angular.module('fitness',
     [ 'fit', 'ngRoute','ngAnimate']
 )
+
+
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider
+        .when('/', {
+          templateUrl: 'views/home.html',
+          controller: 'AuthCtrl',
+          resolve: {
+            user: function($rootScope, $firebase, $firebaseSimpleLogin){
+              if(!$rootScope.userID){
+                var ref = new Firebase('https://.com');
+                var auth = $firebaseSimpleLogin(ref);
+                return auth.$getCurrentUser()
+              }else{
+                return;
+              }
+            }
+
+          }
+        })
+
