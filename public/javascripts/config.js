@@ -44,3 +44,17 @@ app.config(['$routeProvider',
                 templateUrl: 'views/new-exercise.html',
             })
 
+
+
+            .when('/:groupId/edit-exercise/:exerciseId',{
+                templateUrl: 'views/edit-exercise.html',
+                authRequired: true
+            })
+
+            .when('/:groupId/workout',{
+                templateUrl: 'views/workout.html',
+                authRequired: true
+            })
+
+            .otherwise({ redirectTo: '/' });
+    }])
