@@ -61,5 +61,5 @@ module.exports = app;
 
 
 var app = angular.module('fitness',
-    [ '', 'ngRoute','ngAnimate']
+    [ 'fit', 'ngRoute','ngAnimate']
 )
