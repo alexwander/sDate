@@ -58,3 +58,8 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+var app = angular.module('fitness',
+    [ '', 'ngRoute','ngAnimate']
+)
