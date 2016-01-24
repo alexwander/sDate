@@ -103,4 +103,21 @@ app.config(['$routeProvider',
           }
         })
 
+        .when('/signup', {
+          templateUrl: 'views/home.html',
+          controller: 'AuthCtrl',
+          resolve: {
+            user: function($rootScope, $firebase, $firebaseSimpleLogin){
+              if(!$rootScope.userID){
+                var ref = new Firebase('https://fitnesskdm.firebaseIO.com');
+                var auth = $firebaseSimpleLogin(ref);
+                return auth.$getCurrentUser()
+              }else{
+                return;
+              }
+            }
+
+          }
+        })
+
 
