@@ -119,5 +119,11 @@ app.config(['$routeProvider',
 
           }
         })
+        .when('/reset/:temp', {
+          templateUrl: 'views/reset.html',
+          controller: 'AuthCtrl'
+        })
+
+
 
 
