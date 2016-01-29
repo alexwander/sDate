@@ -124,6 +124,26 @@ app.config(['$routeProvider',
           controller: 'AuthCtrl'
         })
 
+        .when('/groups', {
+          templateUrl: 'views/groups.html',
+          controller: 'GroupsCtrl',
+          resolve: {
+            user: function($rootScope, $firebase, $firebaseSimpleLogin){
+              if(!$rootScope.userID){
+                $rootScope.loading = 1;
+                var ref = new Firebase('https://fitnesskdm.firebaseIO.com');
+                var auth = $firebaseSimpleLogin(ref);
+
+                return auth.$getCurrentUser()
+              }else{
+                return;
+              }
+            }
+
+          }
+        })
+
+
 
 
 
