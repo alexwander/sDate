@@ -197,7 +197,6 @@ app.config(['$routeProvider',
 
 
     app.controller( 'mainController',function($rootScope,$scope){
-      //in mainController to track a click anywhere in the app
       $scope.clearDelete = function(){
         $rootScope.currentExercise = {};
         $rootScope.currentGroup = {};
