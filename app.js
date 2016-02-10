@@ -194,7 +194,12 @@ app.config(['$routeProvider',
 
 
 
-
+    app.controller( 'slideController', ['$rootScope', '$scope', '$location', '$route', function($rootScope, $scope, $location, $route) {
+      $rootScope.slideView = function (direction, url) {
+        $rootScope.slideDir = direction;
+        $location.path(url);
+      }
+    }])
 
     app.controller( 'mainController',function($rootScope,$scope){
       $scope.clearDelete = function(){
